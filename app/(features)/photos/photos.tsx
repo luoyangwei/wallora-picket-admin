@@ -27,7 +27,7 @@ export function Photos({ photos }: { photos: UnsplashPhoto[] }) {
             {/* 图片列表 */}
             {/* 请求后端接口然后获取 */}
             <PhotoProvider toolbarRender={(props) => <PreviewToolbar {...props} />}>
-                <div className="grid grid-cols-6 gap-4">
+                <div className="grid sm:grid-cols-6 sm:gap-4 grid-cols-2 gap-2">
                     {photos.map((photo, index) => (
                         <Photo key={index} photo={photo} />
                     ))}
